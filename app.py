@@ -1,4 +1,3 @@
-import io
 from PIL import Image
 import gradio as gr
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
@@ -12,7 +11,7 @@ def get_params():
     # 使用"Helsinki-NLP/opus-mt-zh-en"预训练模型中->英
     parser.add_argument('--opus_mt_zh_cn', type=str, default="Helsinki-NLP/opus-mt-zh-en",
                         help='Directory path to a batch of content images')
-    parser.add_argument('--SDv3', type=str, default="/workspace/mnt/storage/lishimin/lishimin/stable-diffusion-3-medium-diffusers",
+    parser.add_argument('--SDv3', type=str, default="stabilityai/stable-diffusion-3-medium-diffusers",
                         help='Directory path to a batch of style images')
     
     args = parser.parse_args()
